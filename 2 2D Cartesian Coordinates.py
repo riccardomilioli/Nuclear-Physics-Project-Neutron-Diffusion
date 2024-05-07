@@ -29,7 +29,7 @@ aa = np.zeros((N, N))
 # Computing and printing a_pq:
 for p in range(N):
     for q in range(N):
-        integral_val, _ = dblquad(integrand, 0, L_val, lambda y: 0, lambda y: L_val, args=(p+1, q+1, L_val))
+        integral_val, _ = dblquad(integrand, 0, L_val, lambda x: 0, lambda x: L_val, args=(p+1, q+1, L_val))
         aa[p, q] = 4 / L_val**2 * integral_val
 for p in range(1, N+1): # We only print in the range 1 <= p <= 5 with q <= p.
     for q in range(1, N+1):
