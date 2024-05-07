@@ -1,9 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[22]:
-
-
 import numpy as np
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
@@ -103,10 +97,3 @@ plt.ylabel("y")
 plt.contourf(X2, Y2, Z2, cmap='RdGy')
 plt.colorbar(label="Value")
 plt.show()
-
-
-# In[ ]:
-
-
-
-
