@@ -1,9 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[2]:
-
-
 import numpy as np
 import matplotlib.pyplot as plt
 from scipy.integrate import dblquad
@@ -77,10 +71,3 @@ ax.set_ylabel("y")
 ax.set_zlabel("error(t=0)")
 ax.set_box_aspect(aspect=None, zoom=0.9)
 plt.show()
-
-
-# In[ ]:
-
-
-
-
