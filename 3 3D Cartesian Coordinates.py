@@ -77,11 +77,10 @@ plt.show()  # The result doesn't make sense physically, even though the initial 
             # Indeed the values of small a_pqr (<1e-15) are different
 
 # Plotting f at z=L/2:
-X2, Y2 = np.meshgrid(x_vals, y_vals)
-Z2 = f(X2, Y2, L_val/2, L_val)
+Z = f(X2, Y2, L_val/2, L_val)
 fig2 = plt.figure(constrained_layout=True)
 ax2 = fig2.add_subplot(111, projection='3d')
-ax2.plot_surface(X2, Y2, Z2, cmap='viridis')
+ax2.plot_surface(X, Y, Z, cmap='viridis')
 ax2.set_title("Function f for L=19.2 cm, N=4, z=L/2")
 ax2.set_xlabel("x")
 ax2.set_ylabel("y")
