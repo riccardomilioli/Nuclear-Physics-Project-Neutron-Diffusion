@@ -1,9 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[2]:
-
-
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -75,4 +69,3 @@ plt.ylabel("Error")
 plt.legend()
 plt.grid(True)
 plt.show()
-
