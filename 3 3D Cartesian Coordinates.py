@@ -77,7 +77,7 @@ plt.show()  # The result doesn't make sense physically, even though the initial 
             # Indeed the values of small a_pqr (<1e-15) are different
 
 # Plotting f at z=L/2:
-Z = f(X2, Y2, L_val/2, L_val)
+Z = f(X, Y, L_val/2, L_val)
 fig2 = plt.figure(constrained_layout=True)
 ax2 = fig2.add_subplot(111, projection='3d')
 ax2.plot_surface(X, Y, Z, cmap='viridis')
