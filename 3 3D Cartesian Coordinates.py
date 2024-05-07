@@ -57,7 +57,7 @@ def n_func(x, y, z, t):
                      np.sin(i * np.pi * x / L_val) * np.sin(j * np.pi * y / L_val) * np.sin(k * np.pi * z / L_val)
     return n
 
-# Plotting the solution surface:
+# Plotting the solution:
 x_vals = np.linspace(0, L_val, 100)
 y_vals = np.linspace(0, L_val, 100)
 X, Y = np.meshgrid(x_vals, y_vals, indexing='ij')
