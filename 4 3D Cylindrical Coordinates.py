@@ -48,7 +48,7 @@ df = pd.read_csv('integral_results.txt', delim_whitespace=True, names=['k', 'Int
 integral_results = df['Integral_Result'].values
 
 # Reshaping integral_results to match the shape of aa_vals:
-aa_vals = integral_results.reshape((Np, -1))  # The -1 is needed to automatically determine size of data
+aa_vals = integral_results.reshape((Np, -1))  
 
 # Printing the values of a_1p:
 print('p is fixed p = 1')
