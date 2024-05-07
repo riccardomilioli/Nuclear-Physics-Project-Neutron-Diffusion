@@ -62,7 +62,7 @@ x_vals = np.linspace(0, L_val, 100)
 y_vals = np.linspace(0, L_val, 100)
 X, Y = np.meshgrid(x_vals, y_vals, indexing='ij')
 T = 2e-7
-N_func_vals = n_func(X2, Y2, L_val/2, T) # Computing n_func values for the density plot:
+N_func_vals = n_func(X, Y, L_val/2, T) # Computing n_func values for the density plot:
 
 # Density plot for n_func at z=L/2 and t=2e-7:
 plt.figure(constrained_layout=True)
