@@ -1,9 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[14]:
-
-
 import numpy as np
 import math
 from scipy.integrate import quad
@@ -48,4 +42,3 @@ plt.ylabel('Probability')
 
 plt.tight_layout()
 plt.show()
-
