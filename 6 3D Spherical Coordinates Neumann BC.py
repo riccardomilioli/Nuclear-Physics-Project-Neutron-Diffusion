@@ -21,8 +21,8 @@ def equation_cot(r):
 guess = 8 # Followed suggestion from paper
 
 # Solving numerically to find the critical radius and hence critical volume and mass
-Rcrit = (fsolve(equation_cot, guess)).item() # Otherwise we get an array (with only 1 element)
-                                             # The zero closest to "guess" is found
+Rcrit = (fsolve(equation_cot, guess)).item() # The zero closest to "guess" is found
+                                             
 print(f"The critical radius is {Rcrit} cm")
 
 Vcrit = (4 / 3) * np.pi * Rcrit ** 3
