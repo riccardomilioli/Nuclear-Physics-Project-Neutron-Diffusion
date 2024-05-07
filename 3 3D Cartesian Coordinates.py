@@ -1,6 +1,5 @@
 import numpy as np
 import matplotlib.pyplot as plt
-from mpl_toolkits.mplot3d import Axes3D
 from scipy.integrate import tplquad
 
 # We want to solve the 3D diffusion equation for a neutron in cartesian coordinates with Dirichlet boundary conditions.
