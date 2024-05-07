@@ -1,3 +1,5 @@
+(*We want to check the density plot given by Python for the neutron density (file 3)*)
+
 (*First check the analytical results*)
 Clear[p, q, r, L];
 result = 
