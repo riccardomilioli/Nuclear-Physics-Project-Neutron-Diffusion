@@ -1,9 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[4]:
-
-
 import numpy as np
 import matplotlib.pyplot as plt
 from scipy.special import jn, jn_zeros
@@ -88,10 +82,3 @@ ax.set_xlabel("r")
 ax.set_ylabel("z")
 ax.set_zlabel("n(r,z)")
 plt.show()
-
-
-# In[ ]:
-
-
-
-
