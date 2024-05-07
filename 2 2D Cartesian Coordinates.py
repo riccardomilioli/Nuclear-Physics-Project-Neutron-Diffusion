@@ -49,6 +49,7 @@ x_vals = np.linspace(0, L_val, 100)
 y_vals = np.linspace(0, L_val, 100)
 X, Y = np.meshgrid(x_vals, y_vals)
 N_vals = n_func(X, Y, t_val, L_val)
+
 fig = plt.figure(constrained_layout=True)
 ax = fig.add_subplot(111, projection='3d')
 ax.plot_surface(X, Y, N_vals, cmap='viridis')
