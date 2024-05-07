@@ -41,7 +41,7 @@ def eqn(x):
 guess2 = - 4.5797e6 # Can check by hand that for this guess the value of "eqn" is close to 0
 alpha = fsolve(eqn, guess2)[0] # Different from the one in paper, but that one is not coherent with the rest 
 
-# Constants needed to define n (see below):
+# Constants needed to define the neutron density:
 k = np.sqrt((eta_val + alpha) / mu_val)
 A = R0 / np.sin(k*R0) # Follows from imposing Neumann BC on n(r, t): n(R0, 0)=1 (see below)
 
