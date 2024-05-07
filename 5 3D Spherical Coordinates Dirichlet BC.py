@@ -30,8 +30,9 @@ print(f"The critical mass is {Mcrit} g")
 def integrand(r, p):
     return r * f(r, r1_val) * np.sin(p * np.pi * r / r1_val)
 
-# Computing values for a_p. Results are different from the one on paper but formula 106 gives these numbers.
-                          # Mathematica also agrees with Python results.
+# Computing values for a_p.
+# Results are different from the one on paper but Mathematica agrees with Python.
+
 aa_vals = np.zeros(N)
 for p in range(1, N + 1):
     integral_result, _ = quad(integrand, 0, r1_val, args=(p,))
