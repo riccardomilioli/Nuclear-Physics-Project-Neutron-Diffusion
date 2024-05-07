@@ -60,16 +60,16 @@ def n_func(x, y, z, t):
 # Plotting the solution:
 x_vals = np.linspace(0, L_val, 100)
 y_vals = np.linspace(0, L_val, 100)
-X, Y = np.meshgrid(x_vals, y_vals, indexing='ij')
+X, Y = np.meshgrid(x_vals, y_vals)
 T = 2e-7
-N_func_vals = n_func(X, Y, L_val/2, T) # Computing n_func values for the density plot:
+n_func_vals = n_func(X, Y, L_val/2, T) # Computing n_func values for the density plot:
 
 # Density plot for n_func at z=L/2 and t=2e-7:
 plt.figure(constrained_layout=True)
 plt.title("Density Plot of n(x, y, L/2) at t=2e-7")
 plt.xlabel("x")
 plt.ylabel("y")
-plt.imshow(N_func_vals, extent=[0, L_val, 0, L_val], cmap='viridis', origin='lower')
+plt.imshow(n_func_vals, extent=[0, L_val, 0, L_val], cmap='viridis', origin='lower')
 plt.colorbar(label="Value")
 plt.show()  # The result doesn't make sense physically, even though the initial condition does
             # With Mathematica the plot is ok instead
@@ -78,13 +78,13 @@ plt.show()  # The result doesn't make sense physically, even though the initial 
 
 # Plotting f at z=L/2:
 fslice = f(X, Y, L_val/2, L_val)
-fig2 = plt.figure(constrained_layout=True)
-ax2 = fig2.add_subplot(111, projection='3d')
-ax2.plot_surface(X, Y, fslice, cmap='viridis')
-ax2.set_title("Function f for L=19.2 cm, N=4, z=L/2")
-ax2.set_xlabel("x")
-ax2.set_ylabel("y")
-ax2.set_zlabel("f(x, y, L/2)", fontsize = 10, labelpad=0.2)
+fig = plt.figure(constrained_layout=True)
+ax = fig.add_subplot(111, projection='3d')
+ax.plot_surface(X, Y, fslice, cmap='viridis')
+ax.set_title("Function f for L=19.2 cm, N=4, z=L/2")
+ax.set_xlabel("x")
+ax.set_ylabel("y")
+ax.set_zlabel("f(x, y, L/2)", fontsize = 10, labelpad=0.2)
 plt.xticks(rotation = 10)
 plt.show()
 
