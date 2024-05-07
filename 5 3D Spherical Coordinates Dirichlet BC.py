@@ -1,9 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[1]:
-
-
 import numpy as np
 import matplotlib.pyplot as plt
 from scipy.integrate import quad
@@ -75,10 +69,3 @@ plt.title("Error Plot: Neutron diffusion at t=0")
 plt.xlabel("r")
 plt.ylabel("Error")
 plt.show()
-
-
-# In[ ]:
-
-
-
-
