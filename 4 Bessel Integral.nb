@@ -1,0 +1,27 @@
+ClearAll[r1, L]
+(*First check that the analytical result is correct*)
+betaq = BesselJZero[0, k]; (*With ; it doesn't get printed*)
+Integrate[
+  4/(L*r1^2*(BesselJ[1, betaq])^2 ) * BesselJ[0, (betaq/r1)*r]*
+   r*(1 - (r/r1)^2) * (Sin[(Pi*z/L)])^2, {r, 0, r1}, {z, 0, L}];
+Simplify[%, Element[k, Integers]]
+(*It is, just need to use recurrence relations for Ji*)
+
+ClearAll[r1, L, result]
+(*Parameters of the problem*)
+L = 0.192; 
+r1 = 0.104; 
+
+(*Loop through k values and compute integrals*)
+result = Table[betaq = BesselJZero[0, k];
+   integral = 
+    NIntegrate[
+     4/(L*r1^2*(BesselJ[1, betaq])^2)*BesselJ[0, (betaq/r1)*r]*
+      r*(1 - (r/r1)^2)*(Sin[(Pi*z/L)])^2, {r, 0, r1}, {z, 0, L}];
+   {k, integral}, {k, 1, 10}];
+
+(*Print the results*)
+TableForm[result, TableHeadings -> {None, {"k", "Integral Result"}}]
+
+(*Export the results to a .txt file*)
+Export["integral_results.txt", result, "Table"];

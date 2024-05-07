@@ -1,0 +1,17 @@
+Clear[r1]
+(*First check that the analytical result is correct*)
+Integrate[2/r1 * r * (1 - (r/r1)^2)*Sin[p Pi r / r1], {r, 0, r1}];
+Simplify[%, Element[p, Integers]]
+
+Clear[r1, result]
+(*Parameters of the probelm*)
+r1 = 0.115;
+
+(*Compute the integral for p from 1 to 30*)
+result = 
+  Table[integral = 
+    NIntegrate[2/r1*r*(1 - (r/r1)^2)*Sin[p*Pi*r/r1], {r, 0, r1}];
+   {p, integral}, {p, 1, 30}];
+
+(*Print the results*)
+TableForm[result, TableHeadings -> {None, {"p", "Integral Result"}}]
