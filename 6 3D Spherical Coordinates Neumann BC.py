@@ -1,9 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[30]:
-
-
 import numpy as np
 import matplotlib.pyplot as plt
 from scipy.optimize import fsolve
@@ -79,10 +73,3 @@ ax.set_ylabel("t")
 ax.set_zlabel("n(r, t)", fontsize = 9, labelpad = 0.1)
 ax.set_box_aspect(aspect=None, zoom=0.9)
 plt.show()
-
-
-# In[ ]:
-
-
-
-
