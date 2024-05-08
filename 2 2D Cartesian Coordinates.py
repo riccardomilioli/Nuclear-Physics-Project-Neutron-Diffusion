@@ -60,15 +60,15 @@ ax.set_zlabel("n(t=1e-7)", fontsize = 9, labelpad=0.2)
 ax.set_box_aspect(aspect=None, zoom=0.9)
 plt.show()
 
-# Plotting the error surface at t=0:
-t_val = 0
-error_vals = n_func(X, Y, t_val, L_val) - f(X, Y, L_val)
-fig = plt.figure(constrained_layout=True)
-ax = fig.add_subplot(111, projection='3d')
-ax.plot_surface(X, Y, error_vals, cmap='viridis')
-ax.set_title("Neutron diffusion error for L=15.7 cm, N=5, t=0")
-ax.set_xlabel("x")
-ax.set_ylabel("y")
-ax.set_zlabel("error(t=0)")
-ax.set_box_aspect(aspect=None, zoom=0.9)
+# Plotting the initial condition:
+f_vals = f(X, Y, L_val)
+fig2 = plt.figure(constrained_layout=True)
+ax2 = fig2.add_subplot(111, projection='3d')
+ax2.plot_surface(X, Y, f_vals, cmap='viridis')
+ax2.set_title("Initial condition f for L=15.7 cm")
+ax2.set_xlabel("x")
+ax2.set_ylabel("y")
+ax2.set_zlabel("f(x,y)")
+ax2.set_box_aspect(aspect=None, zoom=0.82)
 plt.show()
+
