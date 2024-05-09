@@ -63,7 +63,7 @@ plt.xticks(rotation = 10)
 ax.set_box_aspect(aspect=None, zoom=0.9)
 plt.show()
 
-# Plotting the error:
+# Plotting the error for t=0:
 error_vals = f(r_vals, r1_val) - n_func(r_vals, 0)
 plt.plot(r_vals, error_vals)
 plt.title("Error Plot: Neutron diffusion at t=0")
