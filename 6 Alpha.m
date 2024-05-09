@@ -10,13 +10,13 @@ lambda_t = 3.6;
 % Define the function f(x)
 f = @(x) -1 + R0 * sqrt((eta_val + x)/mu_val) * cot(R0 * sqrt((eta_val + x)/mu_val)) + (3 * R0)/(2* lambda_t);
 
-% Define the range of x values
+% Define the range of x values:
 x = linspace(-475e4, -450e4, 100000);
-% Initialize y array
+% Initialize a new array y:
 y = zeros(size(x));
 
-% Compute y values using a loop
-for i = 1:length(x)
+% Fill the array y with the values of f(x):
+for i = 1:length(x) % So we make sure that they have the same dimensionality
     y(i) = f(x(i));
 end
 
@@ -28,8 +28,8 @@ ylabel('f(x)');
 title('Plot of the Function f(x)');
 grid on;
 
-% Use fzero to find zeros
+% Let's also check where is the zero:
 x0 = 1; % It's the initial guess
 x_zero = fzero(f, x0);
 
-fprintf('Zero of the function f(x) is approximately at x = %.4f\n', x_zero);
+fprintf('The zero of f is at x = %.4f\n', x_zero);
