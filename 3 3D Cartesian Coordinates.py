@@ -27,7 +27,7 @@ print(f"The critical mass is {Mcrit} g")
 
 # Calculation of the integral to get a_pqr.
 # First initialize a_pqr:
-aa_vals = np.zeros((N_val, N_val, N_val), dtype=float)
+aa_vals = np.zeros((N_val, N_val, N_val))
 
 # Defining the function to be integrated:
 def integrand(x, y, z, p, q, r):
@@ -80,7 +80,7 @@ fslice = f(X, Y, L_val/2, L_val)
 fig = plt.figure(constrained_layout=True)
 ax = fig.add_subplot(111, projection='3d')
 ax.plot_surface(X, Y, fslice, cmap='viridis')
-ax.set_title("Function f for L=19.2 cm, N=4, z=L/2")
+ax.set_title("Function f for L=19.2 cm, z=L/2")
 ax.set_xlabel("x")
 ax.set_ylabel("y")
 ax.set_zlabel("f(x, y, L/2)", fontsize = 10, labelpad=0.2)
