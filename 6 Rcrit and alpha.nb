@@ -1,13 +1,18 @@
 (*For completeness I included this code that I used to compare \
 results for Rcrit and alpha with Pyhton file n° 6*)
 
+(*Parameters of the problem*)
 etaVal = 1.8958*10^8;
 muVal = 2.3446*10^5;
 lamb = 2.6;
 k = Sqrt[etaVal / muVal];
+
+(*First we look for Rcrit*)
 f[x_] := -1 + k * x * Cot[k*x] + 3/2 * x/lamb;
 Plot[f[x], {x, 8, 8.7}, Axes -> True, AxesLabel -> {"r", "f(r)"}]
 FindRoot[f[x] == 0, {x, 8}]
+
+(*Then we look for alpha*)
 R0 = 8.5;
 f[y_] := -1 +  
    Sqrt[(etaVal + y) / muVal] * R0 * 
