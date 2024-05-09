@@ -23,13 +23,13 @@ end
 % Plot the function
 figure;
 plot(x, y);
-xlabel('x');
-ylabel('f(x)');
-title('Plot of the Function f(x)');
+xlabel('alpha');
+ylabel('f(alpha)');
+title('Plot of the Function f(alpha)');
 grid on;
 
 % Let's also check where is the zero:
 x0 = 1; % It's the initial guess
 x_zero = fzero(f, x0);
 
-fprintf('The zero of f is at x = %.4f\n', x_zero);
+fprintf('The zero of f is at alpha = %.4f\n', x_zero);
