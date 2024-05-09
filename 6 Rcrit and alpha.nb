@@ -1,5 +1,5 @@
 (*For completeness I included this code that I used to compare \
-results for Rcrit and alpha with Pyhton file n° 7*)
+results for Rcrit and alpha with Pyhton file n° 6*)
 
 etaVal = 1.8958*10^8;
 muVal = 2.3446*10^5;
