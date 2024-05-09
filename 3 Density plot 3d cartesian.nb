@@ -2,7 +2,6 @@
 
 (*First check the analytical results*)
 Clear[p, q, r, L];
-result = 
   Integrate[
    8/L^3 * 8*x*y*z/L^3 *(1 - x/L)*(1 - y/L)*(1 - z/L)*Sin[p Pi x /L]*
     Sin[q Pi y/L]*Sin[r Pi z /L], 
