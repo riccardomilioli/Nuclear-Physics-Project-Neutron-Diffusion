@@ -9,7 +9,7 @@ def f(x, y, L):
     return (1 - (x / L)) * (1 - (y / L)) * x * y / (L / 4)**2
 
 # Parameters of the problem:
-L_val = 15.7 # [cm]. We want criticality so we work with L > Lcrit (see below)
+L_val = 0.157 # [m]. We want criticality so we work with L > Lcrit (see below)
 N = 5 # Number of a_pq that get printed (and computed). In this case we get up to a_55
 mu_val = 2.3446e5 # [m^2/s]. Diffusion constant
 eta_val = 1.8958e8 # [1/s]. Neutron diffusion rate
@@ -37,7 +37,7 @@ for p in range(1, N+1): # We only print in the range 1 <= p <= 5 with q <= p.
 
 # Solving the diffusion equation:
 def n_func(x, y, t, L):
-    result = 0 # Initializing the result 
+    result = np.zeros_like(x) # Initializing the result 
     for i in range(N):
         for j in range(N):
             result += aa[i, j] * np.exp(eta_val * t - mu_val * ((i + 1) * np.pi / L)**2 * t - mu_val * ((j + 1) * np.pi / L_val)**2 * t) * np.sin((i + 1) * np.pi * x / L_val) * np.sin((j + 1) * np.pi * y / L_val)
