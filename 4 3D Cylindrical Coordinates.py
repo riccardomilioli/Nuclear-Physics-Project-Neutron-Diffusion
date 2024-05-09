@@ -1,7 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
 from scipy.special import jn, jn_zeros
-from scipy.integrate import simps
 import pandas as pd
 
 # We want to solve the 3D diffusion equation for a neutron in cylindrical coordinates with Dirichlet boundary conditions.
