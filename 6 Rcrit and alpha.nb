@@ -23,3 +23,7 @@ FindRoot[-1 +
    Sqrt[(etaVal + y) / muVal] * R0 * 
     Cot[ Sqrt[(etaVal + y) / muVal] * R0] + 3/2 * y/lamb == 
   0, {y, -1}]
+
+(*We also plot f(alpha) in the range where Python finds the 0*)
+Plot[f[y], {y, -475*10^4, -450*10^4}, Axes -> True, 
+ AxesLabel -> {"alpha", "f(alpha)"}]
