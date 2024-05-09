@@ -49,7 +49,19 @@ A = R0 / np.sin(k*R0) # Follows from imposing Neumann BC on n(r, t): n(R0, 0)=1 
 def n(r, t):
     return A * np.exp(-alpha * t) * np.sin(k * r) / r
 
-# Plotting at t=0
+# Plotting the equation for alpha:
+x_vals = np.linspace(-475e4, -450e4, 100000)
+eqn_vals = eqn(x_vals)
+fig = plt.figure()
+plt.plot(x_vals, eqn_vals, label="f(alpha)")
+plt.title("Equation for alpha")
+plt.xlabel("alpha")
+plt.ylabel("f(alpha)")
+plt.legend()
+plt.grid(True)
+plt.show()
+
+# Plotting the solution at t=0
 r_vals = np.linspace(-R0, R0, 1000)
 n_vals_t0 = n(r_vals, 0)
 plt.plot(r_vals, n_vals_t0, linewidth=2)
