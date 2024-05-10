@@ -38,7 +38,7 @@ R0 = 8.5  # [cm]
 def eqn(x):
     return -1 + R0 * np.sqrt((eta_val + x)/mu_val) * cot(R0 * np.sqrt((eta_val + x)/mu_val)) + 3/2 * R0/lambda_t
 
-guess2 = - 4.5797e6 # Can check by hand that for this guess the value of "eqn" is close to 0
+guess2 = 1 
 alpha = fsolve(eqn, guess2)[0] # Different from the one on paper 
 
 # Constants needed to define the neutron density:
