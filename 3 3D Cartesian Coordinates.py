@@ -52,7 +52,7 @@ def n_func(x, y, z, t):
     for i in range(N_val):
         for j in range(N_val):
             for k in range(N_val):
-                n += aa_vals[i, j, k] * np.exp(eta_val * t - mu_val * np.pi * ((i/L_val)**2 + (j/L_val)**2 + (k/L_val)**2) * t) * \
+                n += aa_vals[i, j, k] * np.exp(eta_val * t - mu_val * np.pi**2 * ((i/L_val)**2 + (j/L_val)**2 + (k/L_val)**2) * t) * \
                      np.sin(i * np.pi * x / L_val) * np.sin(j * np.pi * y / L_val) * np.sin(k * np.pi * z / L_val)
     return n
 
