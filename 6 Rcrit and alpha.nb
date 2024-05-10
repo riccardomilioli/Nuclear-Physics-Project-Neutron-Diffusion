@@ -9,18 +9,18 @@ k = Sqrt[etaVal / muVal];
 
 (*First we look for Rcrit*)
 f[x_] := -1 + k * x * Cot[k*x] + 3/2 * x/lamb;
-Plot[f[x], {x, 8, 8.7}, Axes -> True, AxesLabel -> {"r", "f(r)"}]
-FindRoot[f[x] == 0, {x, 8}]
+Plot[f[x], {x, 8, 8.7}, Axes -> True, AxesLabel -> {"r", "f(r)"}, PlotLabel ->Style["Plot for Rcrit", Fontsize -> 18]]
+x0 = x/. FindRoot[f[x] == 0, {x, 8}];
+Print["Rcrit", "=", x0, "cm"]
 
 (*Then we look for alpha*)
 R0 = 8.5;
-f[y_] := -1 +  
-   Sqrt[(etaVal + y) / muVal] * R0 * 
-    Cot[ Sqrt[(etaVal + y) / muVal] * R0] + 3/2 * y/lamb;
-Plot[f[y], {y, -5*10^5, 5*10^5}, Axes -> True, 
- AxesLabel -> {"alpha", "f(alpha)"}]
-FindRoot[f[y] ==  0, {y, -1}]
+g[y_] := -1 + R0 * Sqrt[(etaVal + y) / muVal] * Cot[R0 * Sqrt[(etaVal + y) / muVal]] + (3/2) * (y/lamb);
+Plot[g[y], {y, -5*10^5, 5*10^5}, Axes -> True, 
+ AxesLabel -> {"alpha", "f(alpha)"}, PlotLabel ->Style["Plot for alpha", Fontsize -> 18]]
+y0 = y/. FindRoot[g[y] ==  0, {y, -1}];
+Print["alpha_zero", "=", y0]
 
 (*We also plot f(alpha) in the range where Python finds the 0*)
-Plot[f[y], {y, -475*10^4, -450*10^4}, Axes -> True, 
- AxesLabel -> {"alpha", "f(alpha)"}]
+Plot[g[y], {y, -475*10^4, -450*10^4}, Axes -> True, 
+ AxesLabel -> {"alpha", "f(alpha)"}, PlotLabel ->Style["Plot for alpha in the region where Pyhton finds 0", Fontsize -> 12]]
