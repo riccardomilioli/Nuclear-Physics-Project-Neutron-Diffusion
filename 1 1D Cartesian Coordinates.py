@@ -43,9 +43,9 @@ def n_func(x, t):
 # Plotting the solution:
 fig = plt.figure(constrained_layout=True)
 ax = fig.add_subplot(111, projection='3d')
-x_vals = np.linspace(0, L_val, 100)
-t_vals = np.linspace(0, 2e-5, 100)
-X, T = np.meshgrid(x_vals, t_vals)
+x_vals_plot = np.linspace(0, L_val, 100)
+t_vals_plot = np.linspace(0, 2e-5, 100)
+X, T = np.meshgrid(x_vals_plot, t_vals_plot)
 N_vals = n_func(X, T)
 ax.plot_surface(X, T, N_vals, cmap='viridis')
 ax.set_title("Neutron diffusion for L=11.1 cm, N=30")
@@ -57,12 +57,12 @@ plt.show()
 
 # Computing errors at t=0:
 t_val = 0
-n_t0_vals = n_func(x_vals, t_val)
-error_vals = n_t0_vals - f(x_vals, L_val)
+n_t0_vals = n_func(x_vals_plot, t_val)
+error_vals = n_t0_vals - f(x_vals_plot, L_val)
 
 # Plotting errors at t=0:
 fig_error = plt.figure()
-plt.plot(x_vals, error_vals, label="Error at t=0")
+plt.plot(x_vals_plot, error_vals, label="Error at t=0")
 plt.title("Neutron diffusion error for t=0")
 plt.xlabel("x")
 plt.ylabel("Error")
