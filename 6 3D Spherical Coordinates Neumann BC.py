@@ -43,7 +43,7 @@ alpha = fsolve(eqn, guess2)[0] # Different from the one on paper
 
 # Constants needed to define the neutron density:
 k = np.sqrt((eta_val + alpha) / mu_val)
-A = R0 / np.sin(k*R0) # Follows from imposing Neumann BC on n(r, t): n(R0, 0)=1 (see below)
+A = R0 / np.sin(k*R0) # Follows from imposing an initial condition on n(r, t): n(R0, 0)=1 (see below)
 
 # Defining the neutron density n(r, t):
 def n(r, t):
