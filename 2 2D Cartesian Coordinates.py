@@ -18,7 +18,7 @@ eta_val = 1.8958e8 # [1/s]. Neutron diffusion rate
 Lcrit = np.pi * np.sqrt(2 * mu_val / eta_val)
 print(f"The critical lenght is {Lcrit} m")
 
-# Calculation of the integral to find a_p. 
+# Calculation of the integral to find a_pq. 
 # First define the function to be integrated:
 def integrand(x, y, p, q, L):
     return f(x, y, L) * np.sin(p * np.pi * x / L) * np.sin(q * np.pi * y / L)
