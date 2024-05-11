@@ -19,7 +19,7 @@ g[y_] := -1 + R0 * Sqrt[(etaVal + y) / muVal] * Cot[R0 * Sqrt[(etaVal + y) / muV
 Plot[g[y], {y, -5*10^5, 5*10^5}, Axes -> True, 
  AxesLabel -> {"alpha", "f(alpha)"}, PlotLabel ->Style["Plot for alpha", Fontsize -> 18]]
 y0 = y/. FindRoot[g[y] ==  0, {y, -1}];
-Print["alpha_zero", "=", y0]
+Print["The zero is at alpha", "=", y0]
 
 (*We also plot f(alpha) in the range where Python finds the 0*)
 Plot[g[y], {y, -475*10^4, -450*10^4}, Axes -> True, 
