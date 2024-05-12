@@ -23,7 +23,7 @@ eta_val = 1.8958e8 # [1/s]. Neutron diffusion rate
 Lcrit = np.pi * np.sqrt(3 * mu_val / eta_val)
 print(f"The critical lenght is {Lcrit} m")
 
-alpha = (jn_zeros(0, 1)).item() # Otherwise jn_zeros gives an array (with only 1 element)
+alpha = (jn_zeros(0, 1)).item() 
 Rcrit = alpha * np.sqrt(3 * mu_val /(2 * eta_val))
 print(f"The critical radius is {Rcrit} m")
 
