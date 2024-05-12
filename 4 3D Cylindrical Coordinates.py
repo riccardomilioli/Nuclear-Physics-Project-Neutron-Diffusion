@@ -12,8 +12,8 @@ def f(r, z, r1, L):
 
 # Parameters of the problem:
 rho = 18.71e6  # [g/m^3]. Density
-L_val = 0.192 # [m]. We want criticality so we work with L > Lcrit (see below)
-r1_val = 0.104 # [m]. We want criticality so we work with R > Rcrit (see below)
+L_val = 0.192 # [m]. We want supercriticality so we work with L > Lcrit (see below)
+r1_val = 0.104 # [m]. We want supercriticality so we work with R > Rcrit (see below)
 Np = 1 # Number of a_pq that are computed for p. Coherent with the fact that all a_pq are 0 for p>1 
 Nq = 10 # Number of a_pq that are computed for q
 mu_val = 2.3446e5 # [m^2/s]. Diffusion constant
