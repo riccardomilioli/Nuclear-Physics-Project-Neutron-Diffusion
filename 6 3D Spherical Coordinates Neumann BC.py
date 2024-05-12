@@ -31,7 +31,7 @@ print(f"The critical volume is {Vcrit} cm^3")
 Mcrit = rho * Vcrit  
 print(f"The critical mass is {Mcrit} g")
 
-# We want criticality so we work with R > Rcrit (see below). This implies a non-zero alpha:
+# We want supercriticality so we work with R > Rcrit (see below). This implies a non-zero alpha:
 R0 = 8.5  # [cm]
 
 # To find such alpha we go back to "equation_cot(r)" but now the variable is alpha:
