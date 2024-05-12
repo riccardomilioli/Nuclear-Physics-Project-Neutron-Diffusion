@@ -10,7 +10,7 @@ def f(x, y, z, L):
 
 # Parameters of the problem:
 rho = 18.71e6  # [g/m^3]. Density
-L_val = 0.192 # [m]. We want criticality so we work with L > Lcrit (see below)
+L_val = 0.192 # [m]. We want supercriticality so we work with L > Lcrit (see below)
 N_val = 4 # Number of a_pqr that get printed (and computed). In this case we get up to a_444 
 mu_val = 2.3446e5 # [m^2/s]. Diffusion constant
 eta_val = 1.8958e8 # [1/s]. Neutron diffusion rate 
