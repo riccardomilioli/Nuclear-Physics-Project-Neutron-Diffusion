@@ -1,7 +1,7 @@
 (*We want to check the density plot given by Python for the neutron density (file 3)*)
 
 (*First check the analytical results*)
-Clear[p, q, r, L];
+Clear[p, q, r];
   Integrate[
    8/L^3 * 8*x*y*z/L^3 *(1 - x/L)*(1 - y/L)*(1 - z/L)*Sin[p Pi x /L]*
     Sin[q Pi y/L]*Sin[r Pi z /L], 
@@ -9,18 +9,18 @@ Clear[p, q, r, L];
 Simplify[%, Element[p | q | r, Integers]]
 
 (*Perform the integration numerically*)
-Clear[p, q, r, L];
-L = 0.192;
+Clear[p, q, r];
+Lval = 0.192; (*m*)
 
 (*Defining the integrand*)
 integrand[x_, y_, z_, p_, q_, r_] := 
-  8/L^3*8*x*y*z/L^3*(1 - x/L)*(1 - y/L)*(1 - z/L)*Sin[p Pi x/L]*
-   Sin[q Pi y/L]*Sin[r Pi z/L];
+  8/Lval^3*8*x*y*z/Lval^3*(1 - x/Lval)*(1 - y/Lval)*(1 - z/Lval)*Sin[p Pi x/Lval]*
+   Sin[q Pi y/Lval]*Sin[r Pi z/Lval];
 
 (*Computing the integral*)
 result = 
   Integrate[
-   integrand[x, y, z, p, q, r], {x, 0, L}, {y, 0, L}, {z, 0, L}, 
+   integrand[x, y, z, p, q, r], {x, 0, Lval}, {y, 0, Lval}, {z, 0, Lval}, 
    Assumptions -> Element[p | q | r, Integers]];
 
 (*Evaluating the result for p,q,r from 1 to 4 and print them in a \
@@ -32,7 +32,6 @@ evaluatedResult // MatrixForm
 aaVals = evaluatedResult;
 
 (*Defining the parameters*)
-Lval = 0.192; (*m*)
 Nval = 4;
 etaVal = 1.8958*10^8; (*1/s*)
 muVal = 2.3446*10^5; (*m^2/s*)
@@ -49,8 +48,7 @@ nFunc[x_, y_, z_, t_] :=
 (*Density plot for n_func at z=L/2 and t=2*10^-7*)
 nPlot = DensityPlot[
    nFunc[x, y, Lval/2, 2*10^-7], {x, 0, Lval}, {y, 0, Lval}, 
-   PlotRange -> All, PlotLegends -> Automatic, 
-   FrameLabel -> {"x", "y", "n(x, y, z=L/2, t=2e-7)"}, 
+   PlotLegends -> Automatic, FrameLabel -> {"x", "y", "n(x, y, z=L/2, t=2e-7)"}, 
    LabelStyle -> {14, Bold, Black}];
 
 (*Showing the plot*)
