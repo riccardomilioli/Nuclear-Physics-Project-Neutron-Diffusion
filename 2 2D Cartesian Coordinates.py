@@ -9,7 +9,7 @@ def f(x, y, L):
     return (1 - (x / L)) * (1 - (y / L)) * x * y / (L / 4)**2
 
 # Parameters of the problem:
-L_val = 0.157 # [m]. We want criticality so we work with L > Lcrit (see below)
+L_val = 0.157 # [m]. We want supercriticality so we work with L > Lcrit (see below)
 N = 5 # Number of a_pq that get printed (and computed). In this case we get up to a_55
 mu_val = 2.3446e5 # [m^2/s]. Diffusion constant
 eta_val = 1.8958e8 # [1/s]. Neutron diffusion rate
