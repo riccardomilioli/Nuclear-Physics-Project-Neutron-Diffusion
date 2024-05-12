@@ -8,7 +8,7 @@ def f(x, L):
     return np.exp(-lambda_val * ((x - L / 2) / (L / 2)) ** 2)
 
 # Parameters of the problem:
-L_val = 0.111 # [m]. We want criticality so we work with L > Lcrit (see below)
+L_val = 0.111 # [m]. We want supercriticality so we work with L > Lcrit (see below)
 lambda_val = 100
 mu_val = 2.3446e+05 # [m^2/s]. Diffusion constant
 eta_val = 1.8958e+08 # [1/s]. Neutron diffusion rate 
