@@ -10,7 +10,7 @@ def f(r, r1):
 
 # Parameters of the problem:
 rho = 18.71e6  # [g/m^3]. Density
-r1_val = 0.115  # [m]. We want criticality so we work with R > Rcrit (see below)
+r1_val = 0.115  # [m]. We want supercriticality so we work with R > Rcrit (see below)
 N = 30 # Number of a_p that are computed
 mu_val = 2.3446e5 # [m^2/s]. Diffusion constant
 eta_val = 1.8958e8 # [1/s]. Neutron diffusion rate 
