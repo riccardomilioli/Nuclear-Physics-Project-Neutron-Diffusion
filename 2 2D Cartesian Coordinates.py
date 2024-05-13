@@ -70,5 +70,6 @@ ax2.set_xlabel("x")
 ax2.set_ylabel("y")
 ax2.set_zlabel("f(x,y)")
 ax2.set_box_aspect(aspect=None, zoom=0.82)
+plt.xticks(rotation = 10)
 plt.show()
 
