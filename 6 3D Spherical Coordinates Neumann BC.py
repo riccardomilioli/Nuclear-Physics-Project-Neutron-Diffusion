@@ -21,7 +21,7 @@ def eqn_rcrit(r):
 guess = 8 # Followed suggestion from paper
 
 # Solving numerically to find the critical radius and hence critical volume and mass
-Rcrit = (fsolve(eqn_rcrit, guess)).item() # The zero closest to "guess" is found
+Rcrit = (fsolve(eqn_rcrit, guess)).item()
                                              
 print(f"The critical radius is {Rcrit} cm")
 
