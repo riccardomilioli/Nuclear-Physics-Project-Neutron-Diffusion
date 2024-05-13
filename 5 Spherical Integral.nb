@@ -7,7 +7,7 @@ Simplify[%, Element[p, Integers]]
 
 Clear[r1, result]
 (*Parameters of the probelm*)
-r1 = 0.115;
+r1 = 0.115; (*m*)
 
 (*Computing the integral with p from 1 to 30*)
 result = 
