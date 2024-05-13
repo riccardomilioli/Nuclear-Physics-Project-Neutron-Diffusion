@@ -14,14 +14,14 @@ eta_val = 1.8958e8 # [1/s]. Neutron diffusion rate
 def cot(x):
     return 1 / np.tan(x)
 
-def equation_cot(r): 
+def eqn_rcrit(r): 
     return -1 + r * np.sqrt(eta_val/ mu_val) * cot(r * np.sqrt(eta_val / mu_val)) + 3 / (2 * lambda_t) * r
 
 # Guess to find the solution of equation_cot:
 guess = 8 # Followed suggestion from paper
 
 # Solving numerically to find the critical radius and hence critical volume and mass
-Rcrit = (fsolve(equation_cot, guess)).item() # The zero closest to "guess" is found
+Rcrit = (fsolve(eqn_rcrit, guess)).item() # The zero closest to "guess" is found
                                              
 print(f"The critical radius is {Rcrit} cm")
 
@@ -35,11 +35,11 @@ print(f"The critical mass is {Mcrit} g")
 R0 = 8.5  # [cm]
 
 # To find such alpha we go back to "equation_cot(r)" but now the variable is alpha:
-def eqn(x):
+def eqn_alpha(x):
     return -1 + R0 * np.sqrt((eta_val + x)/mu_val) * cot(R0 * np.sqrt((eta_val + x)/mu_val)) + 3/2 * R0/lambda_t
 
 guess2 = 1 
-alpha = fsolve(eqn, guess2)[0] # Different from the one on paper 
+alpha = fsolve(eqn_alpha, guess2)[0] # Different from the one on paper 
 
 # Constants needed to define the neutron density:
 k = np.sqrt((eta_val + alpha) / mu_val)
@@ -51,9 +51,9 @@ def n(r, t):
 
 # Plotting the equation for alpha:
 x_vals = np.linspace(-475e4, -450e4, 100000)
-eqn_vals = eqn(x_vals)
+eqn_alpha_vals = eqn_alpha(x_vals)
 fig = plt.figure()
-plt.plot(x_vals, eqn_vals, label="f(alpha)")
+plt.plot(x_vals, eqn_alpha_vals, label="f(alpha)")
 plt.title("Equation for alpha")
 plt.xlabel("alpha")
 plt.ylabel("f(alpha)")
