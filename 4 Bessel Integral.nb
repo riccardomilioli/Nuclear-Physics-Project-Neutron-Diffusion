@@ -11,8 +11,8 @@ Simplify[%, Element[k, Integers]]
 
 ClearAll[r1, L, result]
 (*Parameters of the problem*)
-L = 0.192; 
-r1 = 0.104; 
+L = 0.192; (*m*)
+r1 = 0.104; (*m*)
 
 (*Computing the integral with k from 1 to 10*)
 result = Table[betaq = BesselJZero[0, k];
