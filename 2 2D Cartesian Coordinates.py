@@ -58,6 +58,7 @@ ax.set_xlabel("x")
 ax.set_ylabel("y")
 ax.set_zlabel("n(t=1e-7)", fontsize = 9, labelpad=0.2)
 ax.set_box_aspect(aspect=None, zoom=0.9)
+plt.xticks(rotation = 10)
 plt.show()
 
 # Plotting the initial condition:
