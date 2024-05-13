@@ -2,10 +2,10 @@
 % the computation of alpha (file n°6)
 
 % Define the parameters
-R0 = 8.5;
-eta_val =  1.8958e8;
-mu_val = 2.3446e9;
-lambda_t = 3.6;
+R0 = 8.5; % [cm]
+eta_val =  1.8958e8; % [1/s]
+mu_val = 2.3446e9; % [cm^2/s]
+lambda_t = 3.6; % [cm]
 
 % Define the function f(x)
 f = @(x) -1 + R0 * sqrt((eta_val + x)/mu_val) * cot(R0 * sqrt((eta_val + x)/mu_val)) + (3 * R0)/(2* lambda_t);
