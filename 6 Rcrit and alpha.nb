@@ -1,4 +1,3 @@
-In[139]:=
 (*For completeness I included this code that I used to compare \
 results for Rcrit and alpha with Pyhton file n° 6*)
 
@@ -25,9 +24,3 @@ Print["The zero is at alpha", "=", y0]
 (*We also plot f(alpha) in the range where Python finds the 0*)
 Plot[g[y], {y, -475*10^4, -450*10^4}, Axes -> True, 
  AxesLabel -> {"alpha", "f(alpha)"}, PlotLabel ->Style["Plot for alpha in the region where Pyhton finds 0", Fontsize -> 12]]
-
-Out[149]= 
-During evaluation of In[139]:= Rcrit=8.36311cm
-Out[156]= 
-During evaluation of In[139]:= The zero is at alpha=-4.60806*10^6
-Out[161]= 
