@@ -40,10 +40,10 @@ beta_vals = jn_zeros(0, Nq)
 # In this case we import results computed by mathematica and saved in 'integral_results.txt'
 
 # Loading the text file into a dataframe:
-df = pd.read_csv('integral_results.txt', delim_whitespace=True, names=['k', 'Integral_Result'], index_col = 0)
+integ_df = pd.read_csv('integral_results.txt', delim_whitespace=True, names=['k', 'Integral_Result'], index_col = 0)
 
 # Extracting the results from the dataframe:
-integral_results = df['Integral_Result'].values
+integral_results = integ_df['Integral_Result'].values
 
 # Reshaping integral_results to match the shape of aa_vals:
 aa_vals = integral_results.reshape((Np, -1))  
