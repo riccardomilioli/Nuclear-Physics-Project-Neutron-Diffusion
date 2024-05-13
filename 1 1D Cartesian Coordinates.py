@@ -55,14 +55,10 @@ ax.set_zlabel("n(t, x)", fontsize = 10, labelpad = 0.1)
 ax.set_box_aspect(aspect=None, zoom=0.9)
 plt.show()
 
-# Computing errors at t=0:
-t_val = 0
-n_t0_vals = n_func(x_vals_plot, t_val)
-error_vals = n_t0_vals - f(x_vals_plot, L_val)
-
 # Plotting errors at t=0:
+error_vals = n_func(x_vals, 0) - f(x_vals, L_val)
 fig_error = plt.figure()
-plt.plot(x_vals_plot, error_vals, label="Error at t=0")
+plt.plot(x_vals, error_vals, label="Error at t=0")
 plt.title("Neutron diffusion error for t=0")
 plt.xlabel("x")
 plt.ylabel("Error")
