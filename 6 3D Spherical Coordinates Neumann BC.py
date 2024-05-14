@@ -17,7 +17,7 @@ def cot(x):
 def eqn_rcrit(r): 
     return -1 + r * np.sqrt(eta_val/ mu_val) * cot(r * np.sqrt(eta_val / mu_val)) + 3 / (2 * lambda_t) * r
 
-# Guess to find the solution of equation_cot:
+# Guess to find the solution of eqn_rcrit(r):
 guess = 8 # Followed suggestion from paper
 
 # Solving numerically to find the critical radius and hence critical volume and mass
