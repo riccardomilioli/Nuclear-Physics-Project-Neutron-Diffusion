@@ -17,7 +17,7 @@ r1_val = 0.104 # [m]. We want supercriticality so we work with R > Rcrit (see be
 Np = 1 # Number of a_pq that are computed for p. Coherent with the fact that all a_pq are 0 for p>1 
 Nq = 10 # Number of a_pq that are computed for q
 mu_val = 2.3446e5 # [m^2/s]. Diffusion constant
-eta_val = 1.8958e8 # [1/s]. Neutron diffusion rate 
+eta_val = 1.8958e8 # [1/s]. Neutron rate of formation
 
 # Computig the critical lenght, radius, volume and mass:
 Lcrit = np.pi * np.sqrt(3 * mu_val / eta_val)
