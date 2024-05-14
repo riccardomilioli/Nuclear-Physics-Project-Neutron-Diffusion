@@ -16,7 +16,7 @@ x = linspace(-475e4, -450e4, 100000);
 y = zeros(size(x));
 
 % Fill the array y with the values of f(x):
-for i = 1:length(x) % So we make sure that they have the same dimensionality
+for i = 1:length(x) 
     y(i) = f(x(i));
 end
 
