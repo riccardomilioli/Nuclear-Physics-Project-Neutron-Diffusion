@@ -8,7 +8,7 @@ from scipy.optimize import fsolve
 lambda_t = 3.6  # [cm]. Transport free path
 rho = 18.71  # [g/cm^3]. Density
 mu_val = 2.3446e9 # [cm^2/s]. Diffusion constant
-eta_val = 1.8958e8 # [1/s]. Neutron diffusion rate 
+eta_val = 1.8958e8 # [1/s]. Neutron rate of formation
 
 # Define the cotangent function. Needed to compute Rcrit, which means alpha = 0:
 def cot(x):
