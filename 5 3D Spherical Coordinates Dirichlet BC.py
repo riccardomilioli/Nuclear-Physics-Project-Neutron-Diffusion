@@ -13,7 +13,7 @@ rho = 18.71e6  # [g/m^3]. Density
 r1_val = 0.115  # [m]. We want supercriticality so we work with R > Rcrit (see below)
 N = 30 # Number of a_p that are computed
 mu_val = 2.3446e5 # [m^2/s]. Diffusion constant
-eta_val = 1.8958e8 # [1/s]. Neutron diffusion rate 
+eta_val = 1.8958e8 # [1/s]. Neutron rate of formation
 
 # Computig the critical radius, volume and mass:
 Rcrit = np.pi * np.sqrt(mu_val / eta_val)
