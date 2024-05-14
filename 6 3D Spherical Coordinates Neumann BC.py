@@ -34,7 +34,7 @@ print(f"The critical mass is {Mcrit} g")
 # We want supercriticality so we work with R > Rcrit (see below). This implies a non-zero alpha:
 R0 = 8.5  # [cm]
 
-# To find such alpha we go back to "equation_cot(r)" but now the variable is alpha:
+# To find such alpha we go back to "eqn_rcrit(r)" but now the variable is alpha:
 def eqn_alpha(x):
     return -1 + R0 * np.sqrt((eta_val + x)/mu_val) * cot(R0 * np.sqrt((eta_val + x)/mu_val)) + 3/2 * R0/lambda_t
 
