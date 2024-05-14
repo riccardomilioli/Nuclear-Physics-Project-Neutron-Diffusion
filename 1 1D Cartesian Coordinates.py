@@ -11,7 +11,7 @@ def f(x, L):
 L_val = 0.111 # [m]. We want supercriticality so we work with L > Lcrit (see below)
 lambda_val = 100
 mu_val = 2.3446e+05 # [m^2/s]. Diffusion constant
-eta_val = 1.8958e+08 # [1/s]. Neutron diffusion rate 
+eta_val = 1.8958e+08 # [1/s]. Neutron rate of formation
 N = 30 # Number of a_p that are computed
 
 # Computing the critical lenght:
