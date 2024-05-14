@@ -12,9 +12,9 @@ f = @(x) -1 + R0 * sqrt((eta_val + x)/mu_val) * cot(R0 * sqrt((eta_val + x)/mu_v
 
 % Define the range of x values:
 x = linspace(-475e4, -450e4, 100000);
+
 % Initialize a new array y:
 y = zeros(size(x));
-
 % Fill the array y with the values of f(x):
 for i = 1:length(x) 
     y(i) = f(x(i));
