@@ -12,7 +12,7 @@ def f(x, y, L):
 L_val = 0.157 # [m]. We want supercriticality so we work with L > Lcrit (see below)
 N = 5 # Number of a_pq that get printed (and computed). In this case we get up to a_55
 mu_val = 2.3446e5 # [m^2/s]. Diffusion constant
-eta_val = 1.8958e8 # [1/s]. Neutron diffusion rate
+eta_val = 1.8958e8 # [1/s]. Neutron rate of formation
 
 # Computing the critical lenght:
 Lcrit = np.pi * np.sqrt(2 * mu_val / eta_val)
