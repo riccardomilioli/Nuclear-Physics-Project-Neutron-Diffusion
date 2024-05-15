@@ -10,7 +10,7 @@ rho = 18.71 * 10**6  # [g/m^3]. Density
 sigma = 1.235e-28  # [m^2]. Neutron cross-sectional area
 n = (rho * 6.022e23 / 235.04)  # [1/m^3]. Number density of nuclei in the slab
 
-# Calculating the mean free path
+# Calculating the mean free path:
 xmfp_integrand = lambda x: x * sigma * n * np.exp(- sigma * n * x)
 xmfp, _ = quad(xmfp_integrand, 0, math.inf) # We're setting L = math.inf (should be understood as L very large)
 
