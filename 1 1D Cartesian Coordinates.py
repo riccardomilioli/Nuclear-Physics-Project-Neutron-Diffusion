@@ -28,7 +28,7 @@ ap_vals = np.zeros(N)
 for i, p_val in enumerate(p_vals): 
     integrand = f(x_vals, L_val) * np.sin(p_val * np.pi * x_vals / L_val)
     ap_vals[i] = 2 / L_val * np.trapz(integrand, x_vals)
-for i, p_val in enumerate(p_vals[:N]): # Print a_p up to p = 30
+for i, p_val in enumerate(p_vals):
     if p_val % 2 != 0: # We only print odd values, the even ones are all zero
         print(f"p = {p_val}: a({p_val}) = {ap_vals[i]}")
 
