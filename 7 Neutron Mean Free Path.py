@@ -12,9 +12,9 @@ n = (rho * 6.022e23 / 235.04)  # [1/m^3]. Number density of nuclei in the slab
 
 # Calculating the mean free path:
 xmfp_integrand = lambda x: x * sigma * n * np.exp(- sigma * n * x)
-xmfp, _ = quad(xmfp_integrand, 0, math.inf) # We're setting L = math.inf (should be understood as L very large)
+xmfp, _ = quad(xmfp_integrand, 0, math.inf) 
 
-print(f"The mean free path (for large L) is: {xmfp} m")
+print(f"The mean free path is: {xmfp} m")
 
 # Plotting the probabilities:
 x_vals = np.linspace(0, 2, 100)
