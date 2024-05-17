@@ -44,7 +44,7 @@ def n_func(x, y, t, L):
     return result
 
 # Plotting the solution surface at t=1e-7:
-t_val = 1e-7
+t_val = 1e-5
 x_vals = np.linspace(0, L_val, 100)
 y_vals = np.linspace(0, L_val, 100)
 X, Y = np.meshgrid(x_vals, y_vals)
@@ -53,10 +53,10 @@ N_vals = n_func(X, Y, t_val, L_val)
 fig = plt.figure(constrained_layout=True)
 ax = fig.add_subplot(111, projection='3d')
 ax.plot_surface(X, Y, N_vals, cmap='viridis')
-ax.set_title("Neutron diffusion for L=15.7 cm, N=5, t=1e-7")
+ax.set_title("Neutron diffusion for L=15.7 cm, N=5, t=1e-5")
 ax.set_xlabel("x")
 ax.set_ylabel("y")
-ax.set_zlabel("n(t=1e-7)", fontsize = 9, labelpad=0.2)
+ax.set_zlabel("n(t=1e-5)", fontsize = 9, labelpad=0.2)
 ax.set_box_aspect(aspect=None, zoom=0.9)
 plt.xticks(rotation = 10)
 plt.show()
